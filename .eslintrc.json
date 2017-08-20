@@ -15,7 +15,7 @@
     },
     "globals": {
       "$": true,
-      "describe": true.
+      "describe": true,
       "it": true
     }
 }
