@@ -1,8 +1,6 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const fs = require('fs');
-
 // DATABASE CONFIGURATION
 const environment = process.env.NODE_ENV || 'development';
 const configuration = require('./knexfile')[environment];
@@ -14,7 +12,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (request, response) => {
-  response.sendFile(`${__dirname}/public/index.html`)
+  response.sendFile(`${__dirname}/public/index.html`);
 });
 
 app.get('/api/v1/papers', (request, response) => {
