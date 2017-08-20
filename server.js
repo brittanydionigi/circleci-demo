@@ -12,6 +12,12 @@ app.set('port', process.env.PORT || 3000);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.get('/', (request, response) => {
+  fs.readFile(`${__dirname}/public/index.html`, (error, file) => {
+    response.send(file);
+  });
+});
+
 app.get('/api/v1/papers', (request, response) => {
   database('papers').select()
     .then(papers => {

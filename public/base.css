@@ -1,9 +1,3 @@
-body, input {
-  font: menu;
-}
-
 body {
-  width: 500px;
-  margin: auto;
   background-color: #ddd;
 }
