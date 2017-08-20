@@ -14,9 +14,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (request, response) => {
-  fs.readFile(`${__dirname}/public/index.html`, (error, file) => {
-    response.send(file);
-  });
+  response.sendFile(`${__dirname}/public/index.html`)
 });
 
 app.get('/api/v1/papers', (request, response) => {
@@ -62,3 +60,5 @@ app.get('/api/v1/footnotes', (request, response) => {
 app.listen(app.get('port'), () => {
   console.log(`Server is running on port ${app.get('port')}`);
 });
+
+module.exports = app;
