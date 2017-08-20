@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const fs = require('fs');
 
 // DATABASE CONFIGURATION
 const environment = process.env.NODE_ENV || 'development';
@@ -31,9 +32,9 @@ app.get('/api/v1/papers', (request, response) => {
 app.post('/api/v1/papers', (request, response) => {
   const newPaper = request.body;
 
-  for (let requiredParameter of ['title']) {
+  for (const requiredParameter of ['title']) {
     if (!newPaper[requiredParameter]) {
-      return response.status(422).json({
+      response.status(422).json({
         error: `Missing required parameter ${requiredParameter}`
       });
     }

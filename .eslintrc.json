@@ -4,7 +4,13 @@
       "comma-dangle": 0,
       "key-spacing": 0,
       "radix": 0,
-      "no-restricted-syntax": 0
+      "no-restricted-syntax": 0,
+      "func-names": 0,
+      "space-before-function-paren": 0,
+      "arrow-body-style": 0,
+      "arrow-parens": 0,
+      "indent": 0,
+      "import/newline-after-import": 0
     },
     "globals": {
       "$": true
