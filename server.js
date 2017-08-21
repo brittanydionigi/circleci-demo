@@ -9,7 +9,7 @@ const database = require('knex')(configuration);
 app.set('port', process.env.PORT || 3000);
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (request, response) => {
   response.sendFile(`${__dirname}/public/index.html`);
