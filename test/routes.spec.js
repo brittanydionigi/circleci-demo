@@ -7,7 +7,7 @@ const server = require('../server');
 chai.use(chaiHttp);
 
 describe('Client Routes', () => {
-  it('should return the homepage with html elements', (done) => {
+  it('should return homepage with html elements', (done) => {
     chai.request(server)
     .get('/')
     .end((err, response) => {
