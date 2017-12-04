@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "NODE_ENV=test mocha --exit",
+    "test": "NODE_ENV=test mocha",
     "lint": "./node_modules/.bin/eslint ./",
     "start": "nodemon server.js"
   },
